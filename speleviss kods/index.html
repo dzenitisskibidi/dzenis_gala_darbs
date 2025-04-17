@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>pica majaslapa</title>
+</head>
+<link rel="stylesheet" href="style.css">
+
+<body>
+    <header>
+        <h1>Picas izsalkušajiem</h1>
+        <img src="https://media3.giphy.com/media/v1.Y2lkPTc5MGI3NjExbGI5b2s5eXNubjJ3d2Nua3F5bnI0aHE4M3owOWdmZGJlbmVrZmFxciZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/kN8P8JcB64fja/giphy.gif" alt="Pizza Logo">
+    </header>
+
+    <nav>
+        <a href="#home">Sākums</a>
+        <a href="#menu">Ēdienu Karte</a>
+        <a href="#order">Pasūtīt</a>
+        <a href="#contact">Kontakti</a>
+        <a href="#drinks">Dzērieni</a>
+        <a href="#desserts">Saldie ēdieni</a>
+    </nav>
+
+    <div class="main-content">
+        <section id="home">
+            <img class="banner" src="https://example.com/unique-pizza-banner.jpg" alt="Delicious Pizza">
+            <h2>Laipni lūdzam mūsu picu veikalā!</h2>
+            <p>Uzticieties mums, lai sagādātu labāko picu katram puncim. Mūsu picas ir pagatavotas no svaigākajām sastāvdaļām, lai sniegtu jums vislabāko garšu.</p>
+        <div>
+            <canvas id="myCanvas"> </canvas>
+        </div>
+        </section>
+
+        <section id="menu">
+            <h2>Ēdienu Karte</h2>
+
+            <h3>Picas</h3>
+            <div class="menu-item">
+                <img src="https://www.laespanolaaceites.com/wp-content/uploads/2019/06/pizza-margarita-1080x671.jpg" alt="Margarita">
+                <span>Margarita</span>
+            </div>
+            <div class="menu-item">
+                <img src="https://media.dominospizza.lv/__sized__/menu/product_osg_image/2024/02/09/Pepperoni-thumbnail-480x480.png" alt="Pepperoni">
+                <span>Pepperoni</span>
+            </div>
+            <div class="menu-item">
+                <img src="https://www.lulu.lv/cache/images/2040484983/siera-pica_1840769247.jpg" alt="Siera">
+                <span>Siera</span>
+            </div>
+            <div class="menu-item">
+                <img src="https://gastro.24sata.hr/media/img/78/b5/c6782052681edce20941.jpeg" alt="Havaju">
+                <span>Havaju</span>
+            </div>
+            <div class="menu-item">
+                <img src="https://www.lulu.lv/cache/images/2040484983/veganu-pica_2790689253.jpg" alt="Vegan">
+                <span>Vegan</span>
+            </div>
+
+            <h3>Dzērieni</h3>
+            <div class="menu-item">
+                <img src="https://rimibaltic-res.cloudinary.com/image/upload/b_white,c_limit,dpr_3.0,f_auto,q_auto:low,w_400/d_ecommerce:backend-fallback.png/MAT_102741_PCE_LV" alt="Coca Cola">
+                <span>Coca-Cola</span>
+            </div>
+            <div class="menu-item">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/68/Pepsi_2023.svg/1200px-Pepsi_2023.svg.png" alt="Pepsi">
+                <span>Pepsi</span>
+            </div>
+            <div class="menu-item">
+                <img src="https://www.albanyproducts.co.uk/wp-content/uploads/2018/08/fants.jpg" alt="Fanta">
+                <span>Fanta</span>
+            </div>
+            <div class="menu-item">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/a/ae/Sprite_2022.svg" alt="Sprite">
+                <span>Sprite</span>
+            </div>
+            <div class="menu-item">
+                <img src="https://api.hub.jhu.edu/factory/sites/default/files/styles/soft_crop_1300/public/drink-more-water-hub.jpg" alt="Ūdens">
+                <span>Ūdens</span>
+            </div>
+
+            <h3>Saldie ēdieni</h3>
+            <div class="menu-item">
+                <img src="https://img.garsumagija.lv/photos/f2283aea-3d54-4824-a081-215644263a2a.JPG" alt="Šokolādes cepumi">
+                <span>Šokolādes cepumi</span>
+            </div>
+            <div class="menu-item">
+                <img src="https://images.delfi.lv/media-api-image-cropper/v1/ae6765c0-7587-11ed-9679-afdcbd105260.jpg?w=1200&h=628" alt="Zemeņu kūka">
+                <span>Zemeņu kūka</span>
+            </div>
+            <div class="menu-item">
+                <img src="https://nutritionrefined.com/wp-content/uploads/2018/07/vegan-vanilla-ice-cream-featured-500x375.jpg" alt="Vanilīna saldējums">
+                <span>Vanilīna saldējums</span>
+            </div>
+            <div class="menu-item">
+                <img src="https://medusstrops.lv/wp-content/uploads/2024/02/Trufeles-kaste-9.png" alt="Šokolādes trufeles">
+                <span>Šokolādes trufeles</span>
+            </div>
+            <div class="menu-item">
+                <img src="https://zinas.nra.lv/_mm/photos/2018-08/1440px/345034_2b215a5002.jpg" alt="Augļu salāti">
+                <span>Augļu salāti</span>
+            </div>
+        </section>
+
+        <section id="order" class="order-section">
+            <h2>Pasūtīt</h2>
+            <label for="pizza-choice">Izvēlies picu:</label>
+            <select id="pizza-choice" onchange="showQuantityInput()">
+                <option value="">Izvēlies picu</option>
+                <option value="Margarita">Margarita</option>
+                <option value="Pepperoni">Pepperoni</option>
+                <option value="Siera">Siera</option>
+                <option value="Havaju">Havaju</option>
+                <option value="Vegan">Vegan</option>
+            </select>
+            <br><br>
+
+            <label for="drink-choice">Izvēlies dzērienu:</label>
+            <select id="drink-choice">
+                <option value="">Izvēlies dzērienu</option>
+                <option value="Coca-Cola">Coca-Cola</option>
+                <option value="Pepsi">Pepsi</option>
+                <option value="Fanta">Fanta</option>
+                <option value="Sprite">Sprite</option>
+                <option value="Ūdens">Ūdens</option>
+            </select>
+            <br><br>
+
+            <label for="dessert-choice">Izvēlies saldumu:</label>
+            <select id="dessert-choice">
+                <option value="">Izvēlies saldumu</option>
+                <option value="Šokolādes cepumi">Šokolādes cepumi</option>
+                <option value="Zemeņu kūka">Zemeņu kūka</option>
+                <option value="Vanilīna saldējums">Vanilīna saldējums</option>
+                <option value="Šokolādes trufeles">Šokolādes trufeles</option>
+                <option value="Augļu salāti">Augļu salāti</option>
+            </select>
+            <br><br>
+
+            <div id="quantity-container">
+                <label for="quantity">Daudzums:</label>
+                <input type="number" id="quantity" min="1" value="1">
+                <br><br>
+            </div>
+
+            <button>Pasūtīt</button>
+        </section>
+    </div>
+
+    <footer id="contact">
+        <h2>Kontakti</h2>
+        <p>Adrese: Pica Siela 78, Rīga</p>
+        <p>Telefons: +371 12345678</p>
+        <p>&copy; 2024 Picas veikals. Visas tiesības aizsargātas.</p>
+    </footer>
+
+    <script>
+        // Function to show/hide quantity input based on pizza choice
+        function showQuantityInput() {
+            var pizzaChoice = document.getElementById("pizza-choice").value;
+            var quantityContainer = document.getElementById("quantity-container");
+
+            // Show quantity input if a pizza is selected, otherwise hide it
+            if (pizzaChoice) {
+                quantityContainer.style.display = "block";
+            } else {
+                quantityContainer.style.display = "none";
+            }
+        }
+
+        // Function to handle order submission
+        document.querySelector("button").addEventListener("click", function() {
+            var pizzaChoice = document.getElementById("pizza-choice").value;
+            var drinkChoice = document.getElementById("drink-choice").value;
+            var dessertChoice = document.getElementById("dessert-choice").value;
+            var quantity = document.getElementById("quantity").value;
+
+            // Check if pizza, drink, dessert, and quantity are selected
+            if ((pizzaChoice || drinkChoice || dessertChoice) && quantity) {
+                // Display a confirmation message
+                alert("Jūsu pasūtījums: \n" + 
+                    (pizzaChoice ? pizzaChoice + " picu: " + quantity + " gabali\n" : "") + 
+                    (drinkChoice ? drinkChoice + " dzēriens\n" : "") + 
+                    (dessertChoice ? dessertChoice + " saldums\n" : "") + 
+                    "Paldies par pasūtījumu.");
+            } else {
+                // Display an error message if no selection is made
+                alert("Lūdzu, izvēlieties picu, dzērienu vai saldumu un norādiet daudzumu.");
+            }
+        });
+        
+    </script>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
